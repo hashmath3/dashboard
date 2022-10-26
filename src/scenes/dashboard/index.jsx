@@ -12,6 +12,7 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import { motion } from "framer-motion";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -47,12 +48,24 @@ const Dashboard = () => {
         gap="20px"
       >
         {/* ROW 1 */}
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+      
+        <Box  backgroundColor={colors.primary[400]}
+        sx={{  gridColumn:"span 3",
+       
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
+        '&:hover': {
+       
+          border: "1px solid #4cceac",
+          boxShadow:  18 ,
+          transition: '.2s',
+                   cursor: 'pointer',
+                   transformOrigin: 'center right',
+                   transform: 'translate3d(2%,2%,0)',
+
+        }}}
+    
         >
           <StatBox
             title="12,361"
@@ -61,17 +74,33 @@ const Dashboard = () => {
             increase="+14%"
             icon={
               <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" ,
+                '&:hover': {
+                  backgroundColor: 'primary.main',
+                  opacity: [0.9, 0.8, 0.7],
+                },}}
               />
             }
           />
         </Box>
+        
         <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+         backgroundColor={colors.primary[400]}
+         sx={{  gridColumn:"span 3",
+        
+         display:"flex",
+         alignItems:"center",
+         justifyContent:"center",
+         '&:hover': {
+        
+           border: "1px solid #4cceac",
+           boxShadow:  18 ,
+           transition: '.2s',
+                    cursor: 'pointer',
+                    transformOrigin: 'center right',
+                    transform: 'translate3d(2%,2%,0)',
+ 
+         }}}
         >
           <StatBox
             title="431,225"
@@ -86,11 +115,22 @@ const Dashboard = () => {
           />
         </Box>
         <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+     backgroundColor={colors.primary[400]}
+     sx={{  gridColumn:"span 3",
+    
+     display:"flex",
+     alignItems:"center",
+     justifyContent:"center",
+     '&:hover': {
+    
+       border: "1px solid #4cceac",
+       boxShadow:  18 ,
+       transition: '.2s',
+                cursor: 'pointer',
+                transformOrigin: 'center right',
+                transform: 'translate3d(2%,2%,0)',
+
+     }}}
         >
           <StatBox
             title="32,441"
@@ -105,11 +145,22 @@ const Dashboard = () => {
           />
         </Box>
         <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+backgroundColor={colors.primary[400]}
+sx={{  gridColumn:"span 3",
+
+display:"flex",
+alignItems:"center",
+justifyContent:"center",
+'&:hover': {
+
+  border: "1px solid #4cceac",
+  boxShadow:  18 ,
+  transition: '.2s',
+           cursor: 'pointer',
+           transformOrigin: 'center right',
+           transform: 'translate3d(2%,2%,0)',
+
+}}}
         >
           <StatBox
             title="1,325,134"
